@@ -5,7 +5,7 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet],
-  template: `Meu<router-outlet></router-outlet>Caramelo`
+  template: `<router-outlet></router-outlet>`
 })
 export class AppComponent {
 }

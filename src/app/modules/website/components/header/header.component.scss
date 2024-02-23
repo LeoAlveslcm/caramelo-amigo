@@ -1,0 +1,30 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  margin-top: 10px;
+}
+
+.menu-section {
+  display: flex;
+  flex-direction: row;
+
+  nav {
+    display: flex;
+    gap: 50px;
+
+    .menu-nav,
+    .menu-access {
+      display: flex;
+      gap: 15px;
+    }
+  }
+}
+
+.social-media {
+  display: flex;
+  gap: 10px;
+}
