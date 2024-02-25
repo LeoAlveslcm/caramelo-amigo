@@ -1,12 +1,30 @@
 .container {
+  width: 980px;
+  
   display: flex;
   align-items: center;
   justify-content: center;
 
-  width: 980px;
-
   &.container-header {
     justify-content: space-between;
     z-index: 10;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .container {
+    width: 90%;
+
+    &.container-header {
+      align-items: flex-start;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    &.container-header {
+      justify-content: center;
+    }
   }
 }
