@@ -22,24 +22,6 @@
 
 @media only screen and (max-width: 980px) {
   .box {
-    width: 90%;
-    rotate: 0deg;
-
-    &.box-1 {
-      margin-top: -120px;
-      z-index: 2;
-    }
-  
-    &.box-2 {
-      margin-top: -80px;
-      margin-left: 0;
-      z-index: 1;
-    }
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .box {
-    width: 100%;
+    display: none;
   }
 }
