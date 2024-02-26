@@ -1,4 +1,4 @@
-<div class="container container-header">
+<header class="container container-header">
   <a href="">
     <img 
       src="../../../../../assets/images/meu-caramelo-logo.png"
@@ -9,27 +9,25 @@
     <div class="menu-section-container">
 
       <div class="menu-responsive">
-        <mat-icon>menu</mat-icon>
+        <mat-icon (click)="menuOpen()">{{toggleIcon}}</mat-icon>
         <nav>
             <ul>
-                <li><a href="">LOGIN</a></li>
-                <li><a href="" class="btn btn-white">COMEÇAR AGORA!</a></li>
+                <a href=""><li>LOGIN</li></a>
+                <a href="" class="btn btn-white"><li>COMEÇAR AGORA!</li></a>
             </ul>
         </nav>
       </div>
 
-      <div id="stealth-menu" class="menu">
-        <nav>
-            <ul>
-                <a href=""><li>INÍCIO</li></a>
-                <a href=""><li>CADASTRAR</li></a>
-                <a href=""><li>ENCONTRE UM AMIGO</li></a>
-                <a href=""><li>SOBRE NÓS</li></a>
-                <a href=""><li>CONTATOS</li></a>
-            </ul>
-        </nav>
-      </div>
-
+      @if (innerWidth > 980 || menuStatus()) {       
+        <div id="stealth-menu" class="menu">
+          <nav>
+              <ul>
+                  <a href="" *ngFor="let menuList of menuListOrder"><li>{{menuList}}</li></a>
+              </ul>
+          </nav>
+        </div>
+      } @else {}
+      
     </div>
   </div>
 
@@ -47,6 +45,6 @@
           width="20px">
       </a>
   </div>
-</div>
+</header>
 <div class="box box-1"></div>
 <div class="box box-2"></div>
