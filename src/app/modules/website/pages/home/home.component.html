@@ -1,10 +1,41 @@
 <app-header/>
 <main>
-  <div class="container">
-    <div>
+  <section class="container container-intro">
+    <div class="intro">
       <h1>Resgatando Sonhos</h1>
-      <p>Ajude a dar uma vida melhor, a quem tanto amamos!</p>
+      
+      @if(innerWidth < 980){
+        <p>Ajude a dar uma vida melhor, a quem tanto amamos!</p>
+      } @else {
+        <p>Ajude a dar uma vida melhor, <br/> a quem tanto amamos!</p>
+      }
     </div>
     <img src="../../../../../assets/images/garota-com-dog.png" alt="" width="420px">
-  </div>
+  </section>
+
+  <section class="container container-steps">
+      <div class="steps-header">
+        <div>
+          <h2>Como ajudar?</h2>
+          <p>Damos atenção a quem precisa, apenas tiando uma foto!</p>
+        </div>
+        <a href="" class="btn btn-purple">CADASTRAR</a>
+      </div>
+
+      <div class="steps-cards">
+        <div class="card">
+          <img src="../../../../../assets/images/dog-1.png" alt="" width="230" height="120">
+          <p>Encontrou um animalzinho de rua?</p>
+        </div>
+        <div class="reverse-card">
+          <img src="../../../../../assets/images/dog-2.png" alt="" width="122" height="110" class="reverse-card-dog">
+          <img src="../../../../../assets/images/garoto-tirando-foto.png" alt="" width="183" height="183" class="reverse-card-boy">
+          <p>Tire uma foto dele <br> e cadastre <br> no site!</p>
+        </div>
+        <div class="card">
+          <img src="../../../../../assets/images/garoto-com-dog.png" alt="" width="153" height="172">
+          <p>Quem deseja adotar um amiguinho, pode optar por resgatar um!!</p>
+        </div>
+      </div>
+  </section>
 </main>

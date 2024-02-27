@@ -1,0 +1,120 @@
+:host {
+}
+
+main {
+  margin-top: 100px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+// Intro Section
+
+.container-intro {
+  img {
+    filter: drop-shadow(2px 2px 2px grey);
+  }
+}
+
+.intro {
+  width: 100%;
+  padding: 0 20px 0 80px;
+}
+
+// Steps Section
+
+.steps-header {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  a {
+    color: var(--primary-020);
+
+    &:hover {
+      color: var(--white);
+      margin-top: -2px;
+    }
+  }
+}
+
+.steps-cards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  .card,
+  .reverse-card {
+    width: 266px;
+    height: 304px;
+    padding: 0 20px 0 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card {
+    gap: 10px;
+    
+    p {
+      text-align: center;
+      color: var(--primary-020);
+    }
+  }
+
+  .reverse-card{
+    flex-direction: column-reverse;
+    background-image: linear-gradient(var(--primary), var(--primary-010));
+    justify-content: start;
+
+    img {
+      position: absolute;
+    }
+
+    p {
+      color: var(--white);
+      margin-top: 30px;
+      margin-right: 50px;
+    }
+
+    .reverse-card-boy {
+      margin-left: 120px;
+      margin-top: 60px;
+    }
+
+    .reverse-card-dog {
+      margin-top: 180px;
+      margin-right: 200px;
+    }
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .intro {
+    padding: 0 20px 0 20px;
+    
+    h1, 
+    p {
+      text-align: center;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 500px) {
+  .container-intro{
+    img {
+      width: 80%;
+    }
+  }
+}
